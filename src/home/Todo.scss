@@ -1,0 +1,18 @@
+
+li {
+
+  p {
+    display: inline-block;
+    margin-left: 2rem;
+
+    &.u {
+      color: #111;
+    }
+
+    &.c {
+      text-decoration: line-through;
+      color: #555;
+    }
+  }
+
+}

@@ -1,0 +1,31 @@
+
+@import url('https://fonts.googleapis.com/css?family=Rubik:400,400i,700,700i&display=swap');
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 100%;
+  font-family: 'Rubik', sans-serif;
+}
+
+
+.App {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+
+}
+
+#mainContainer {
+  display: flex;
+  flex-grow: 1;
+}
+
+
+
+
+
+
