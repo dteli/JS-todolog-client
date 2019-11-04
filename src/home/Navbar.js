@@ -1,4 +1,5 @@
 import React from 'react';
+//import { Route, Link, Switch } from 'react-router-dom';
 import './Navbar.scss';
 
 const Navbar = (props) => {
@@ -19,8 +20,8 @@ const Navbar = (props) => {
       <p>logo</p>
       <span id="navspacer"></span>
       <ul>
-        <li>Item</li>
-        <li>Item</li>
+        <li>Home</li>
+        <li>Account Info</li>
         {logInOut()}
       </ul>
     </nav>

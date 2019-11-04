@@ -4,5 +4,14 @@
   height: 100%;
 
   padding: 2rem;
+
+  ul {
+    list-style-type: square;
+  }
   
+}
+
+#todolist {
+  flex-grow: 4;
+
 }
