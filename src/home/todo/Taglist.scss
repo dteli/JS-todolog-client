@@ -1,0 +1,13 @@
+
+.todo-taglist {
+  display: inline-block;
+  list-style-type: none;
+
+  li {
+    display: inline-block;
+    background: lightgreen;
+    border: 3px solid lightgreen;
+    border-radius: 5px;
+    margin-right: 1rem;
+  }
+}

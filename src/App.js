@@ -12,6 +12,8 @@ function App() {
   const [token, setToken] = useState(undefined);
   const [loggedIn, setLoggedIn] = useState(false);
 
+  const [tagBank, setTagBank] = useState([]);
+
   useEffect(() => {
     if (localStorage.getItem('token')) {
       setToken(localStorage.getItem('token'));
@@ -26,8 +28,10 @@ function App() {
     //console.log(newToken);
   }
 
-  const sideVC = () => loggedIn === true ?  <Sidebar/> : <Auth updateToken={updateToken}/>;
-  const todoVC = () => loggedIn === true ? <Todolist loggedIn={loggedIn} token={token}/> : null;
+  const sideVC = () => loggedIn === true ?  <Sidebar tagBank={tagBank}/> : <Auth updateToken={updateToken}/>;
+  const todoVC = () => loggedIn === true ? <Todolist loggedIn={loggedIn}
+                                                     token={token}
+                                                     setTagBank={setTagBank}/> : null;
 
   return (
     <div className="App">

@@ -1,6 +1,8 @@
 import React from 'react';
 import './Todo.scss';
 
+import Taglist from './Taglist';
+
 const BASEURL = 'http://localhost:3012/todo';
 
 const Todo = (props) => {
@@ -28,6 +30,7 @@ const Todo = (props) => {
     <li className={props.status} key={props.id}>
       {completeC()}
       <p className={props.status}>{props.desc}</p>
+      <Taglist tags={props.tags} id={props.id} token={props.token} setTabBank={props.setTabBank}/>
     </li>
   );
 };

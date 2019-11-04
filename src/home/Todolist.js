@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import './Todolist.scss';
 
-import Todo from './Todo';
+import Todo from './todo/Todo';
 
 const BASEURL = 'http://localhost:3012/todo'
 
@@ -17,7 +17,7 @@ const Todolist = (props) => {
       fetch(url, {
         method: 'GET',
         headers: {
-          'Content-Type': 'application/json',
+          //'Content-Type': 'application/json',
           'Authorization': props.token
         }
       
@@ -72,7 +72,8 @@ const Todolist = (props) => {
       </form>
       <ul>
         {todos.map(td => <Todo key={td.id} id={td.id} desc={td.description} status={td.completed}
-                               token={props.token} getTodos={getTodos}/>)}
+                               token={props.token} tags={td.tags} getTodos={getTodos}
+                               setTabBank={props.setTabBank}/>)}
       </ul>
     </div>
   );
