@@ -2,12 +2,31 @@
 .todo-taglist {
   display: inline-block;
   list-style-type: none;
+  padding-left: 0;
 
   li {
     display: inline-block;
     background: lightgreen;
     border: 3px solid lightgreen;
+    border-bottom: 3px solid green;
     border-radius: 5px;
     margin-right: 1rem;
+
+    &:last-child {
+      border-bottom: 3px solid lightgreen;
+
+      &:hover {
+        border-bottom: 3px solid lightgreen;
+      }
+    }
+
+    &:hover {
+      border-bottom: 3px solid red;
+    }
+
+    input {
+      width: 6rem;
+    }
+    
   }
 }

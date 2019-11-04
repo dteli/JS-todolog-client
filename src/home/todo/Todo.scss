@@ -1,9 +1,18 @@
 
-li {
+  
+li.todo-item {
+  display: flex;
+
+  border: 2px solid #111;
+  border-bottom: none;
+
+  &:last-child {
+    border-bottom: 2px solid #111;
+  }
 
   p {
     display: inline-block;
-    margin-left: 2rem;
+    margin: 0 2rem 0 1rem;
     font-weight: bold;
     font-size: 1.6rem;
 
@@ -14,7 +23,15 @@ li {
     &.c {
       text-decoration: line-through;
       color: #555;
+      text-shadow: 0 0 10px #888;
     }
   }
 
+  select {
+    box-shadow: 2.8px 2.8px 3px firebrick;
+  }
+
+  div.todo-spacer {
+    flex-grow: 1;
+  }
 }

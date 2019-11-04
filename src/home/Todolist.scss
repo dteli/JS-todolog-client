@@ -1,14 +1,24 @@
 
-#todomain {
+#todo-main {
   flex-grow: 4;
   height: 100%;
 
   padding: 2rem;
 
   ul {
-    list-style-type: square;
+    list-style-type: none;
+
+    padding: 0;
   }
+ 
   
+  #todo-sortbox {
+    p {
+      display: inline-block;
+      margin-right: 2rem;
+    }
+  }
+
 }
 
 #todolist {

@@ -43,9 +43,9 @@ const Taglist = (props) => {
 
   return (
     <ul className="todo-taglist">
-      {tags.map((t, i) => <Tag key={i} id={t}/>)}
+      {tags.map((t, i) => <Tag key={i} id={t} parentId={props.id} token={props.token} getTags={getTags}/>)}
       <li>
-        <input placeholder="enter new tag" value={newTag} onChange={e => {console.log(e.target.value); change(e);}}></input>
+        <input placeholder="enter new tag" value={newTag} onChange={e => change(e)}></input>
       </li>
     </ul>
   );
